@@ -115,7 +115,7 @@ export class PDFService implements PDFInterface {
         template: string,
         { root, extension, engine }: ViewOptions,
     ): string {
-        return join(root, template, `html.${extension || engine}`);
+        return join(root, `${template}.${extension || engine}`);
     }
 
     private generateHtmlFromTemplate(
